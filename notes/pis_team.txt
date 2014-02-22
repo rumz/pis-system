@@ -1,0 +1,68 @@
+	  jofel bayron - 09462266483
+    mth - whole day
+    tf  - 1-5PM
+    ws  - loaded
+    address: 7th St. Dimalna 2 D#3 Jehans Department
+
+  elmer V. rasuman Jr. - 09276519097
+    mth - 3-5
+    tf  - loaded
+    ws  - wed vacant, sat loaded
+    address Bario Saber, Marawi City
+    
+    
+  jerich delfinado  - 09161610355
+  jerico.delfinado@gmail.com
+    mth - != 2:30-4
+    tf  - 7-9, 1-5
+    ws  - loaded
+    address: #040 Fisheries Village, MSU, Marawi City
+
+  zul-qarnain a. ronsing - 09302051122
+    mth - 1-5
+    tf  - 1-5
+    ws  - 193
+    address: 8th st. MSU-Main Campus, Marawi City
+
+
+	
+jetbrains pycharm license
+
+========LICENSE DETAILS========
+
+Type: Classroom License
+Reference No*: LC-626235-D367474455
+Date of Issue: 9 January 2014
+Expiration Date: 8 January 2015
+Number of Authorized Users: not limited
+
+* Please quote this reference when contacting JetBrains
+
+===========LICENSEE============
+
+Name: Mindanao State University Marawi Campus
+Customer ID: 626235
+Address: 12A 6th St MSU Campus, Marawi City, Philippines
+
+=======SOFTWARE PRODUCT========
+
+Product Name: PyCharm Professional Edition
+Licensed Version: the current version and any new product release which is made generally available before 8 January 2015
+
+The software is shipped electronically and is available for download from:
+http://www.jetbrains.com/pycharm/download/
+
+
+=========INSTALLATION==========
+
+Run PyCharm and follow the Installation Wizard's instructions. To register for use of the software or change your existing registration details, go to Help/Register menu of the software and enter the included below the User Name and License Key(s) into the registration dialog:
+
+User Name: Mindanao State University Marawi Campus
+
+===== LICENSE BEGIN =====
+626235-09012014
+00001UTh5xLw4LajL43j6qtC2FMqO6
+Dbz5uV7KJMXtFjS46JeYkAPf0Ij!Tc
+ToUPDrLMjc9"GBQ58Oa7n!E92pHmnr
+===== LICENSE END =====
+    

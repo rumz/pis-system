@@ -1,0 +1,135 @@
+1. do you have any equipment that we can use?  if none what is your budget for IT equipment? 
+
+no server; 14 pcs, not networked.
+
+
+what is your level of IT capacity
+
+no staff; minimal IT knowledge; ms office, yes
+
+user UI preferences ?
+
+which systems do you have in mind ?  how many users will use the system at any one time?
+
+accounting/finance - 5 , personnel - 5, enrolment/student system - 40, inventory - 5
+
+web hosted or hosted on campus ?
+initially hosted then phase 2 web 
+
+security requirements
+
+specific requirements ?
+
+priority of systems to be developed ? 
+enrolment, accounting, personnel, inventory
+
+is it ok if we F/OSS after development? 
+ok
+
+point of contacts
+accounting: macarambon
+enrolment: jennifer esterado
+personnel: jabber peti-ilan
+inventory: rey esterado
+
+tentative schedule 
+before march; need during june
+
+level of transparency / preferred mode of communication
+text / email 
+
+milestone schedule
+
+
+
+can we agree on compensation for our work (hour?week?month?)
+
+
+1600 - main campus  - HS
+200-400 at other branches (4 branches)  - Elementary 
+
+Grading System 
+91-100 E
+
+Sample ID Number: XXXXXX-XXXXXX
+
+existing grades are in excel 
+
+
+
+Hi Jam,
+
+As far as i remember, we are requesting for 4 laptops and 2 mobile wifi internet devices to help in development of the software.  These will be returned to you as soon as the project is completed.
+  We would also like for you to create NDAs for all the people that will join the project.  Maybe create one form and then a signature sheet so if multiple people join the project we won't have to have too many forms.
+  
+This is for everyones protection.
+
+I was hoping by next week to have requirements analysis start; I will probably want to introduce you to Elmer and/or Zul and they will do initial data gathering; hopefully you could bring all the forms the school uses.
+On Jan 20-25 I'll be going on official travel with Philhealth so the sooner we can start, the better.  At least we can get the ball rolling as things are pretty busy for everyone at the moment and we need to try to get 
+as much work done as possible with the limited time that we have.
+
+
+Best Regards,
+
+Rommel
+
+
+
+
+
+
+
+
+
+
+Student
+	name
+	id_no
+	year
+	date created
+	last updated
+	picture - url to local address on pc where pic is stored  pic is 500x500 px  id_no.jpg
+	
+	
+Honors
+	id_no fk student
+	rank
+	notes
+	
+Guidance_Record
+	id_no fk student
+	violation
+	date_violation
+	punishment
+	deficiceny fk DF 
+
+Enrolled_Subjects
+	id fk student 
+	subject fk subjects
+	grade 
+	year 
+	sem
+	date created
+
+Deficiencies
+	id fk student
+	note varchar(255) / blob / text
+	date entered
+	date cleared
+	
+
+Eligible temp
+	id fk student
+	year 
+	sem
+
+CLASS
+	year
+	sem
+	subject
+	schedule (7-8AM MTH)
+	
+
+
+insert into student (  ) 
+select id_no, * from class where year = var and sem = var 
