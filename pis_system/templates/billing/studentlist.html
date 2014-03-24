@@ -1,0 +1,53 @@
+<table id='stud_list' class="table table-hover table-condensed">
+                    
+                    <caption ><font color="#0747E4"> Showing {{total}} of {{size}} result(s)... </font></caption>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Designation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                       
+                        {% for student in students %}
+                            <tr>
+                             {% if type_input == 'stud_id'%}
+                                 {% if input in student.stud_id %}
+                                    <td><a id="{{ student.stud_id }}" href="javascript:getStudent({{ student.stud_id }})">{{ student.stud_id }}</a></td>
+                                    <td>
+                                          {{ student.lastname}} {{' '}}
+                                          {{ student.firstname}} {{' '}}
+                                          {{ student.mi}} {{' '}} 
+                                    </td>
+                                    <td>{{ student.last_school_att}}</td>
+                                 {% endif %}
+                            
+                             {% elif type_input == 'lastname'%}
+                                 {% if input in student.lastname %}
+                                    <td><a id="{{ student.stud_id }}" href="javascript:getStudent({{ student.stud_id }})">{{ student.stud_id }}</a></td>
+                                    <td>
+                                          {{ student.lastname}} {{' '}}
+                                          {{ student.firstname}} {{' '}}
+                                          {{ student.mi}} {{' '}} 
+                                    </td>
+                                    <td>{{ student.last_school_att}}</td>
+                                 {% endif %}
+                             {% elif type_input == 'firstname'%}
+                                 {% if input in student.firstname %}
+                                    <td><a id="{{ student.stud_id }}" href="javascript:getStudent({{ student.stud_id }})">{{ student.stud_id }}</a></td>
+                                    <td>
+                                          {{ student.lastname}} {{' '}}
+                                          {{ student.firstname}} {{' '}}
+                                          {{ student.mi}} {{' '}} 
+                                    </td>
+                                    <td>{{ student.last_school_att}}</td>
+                                 {% endif %}
+                             {% endif %}
+                            </tr>
+                       
+                        {% endfor %}
+                       
+                    </tbody>
+                </table>

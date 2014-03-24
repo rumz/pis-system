@@ -12,25 +12,26 @@
 			<td class="left-content">
 			{% block left-content %}
 				{% include 'stub.html' %}					
-				<form class="form-search">
+				<form method="get" id='srch_stud' action="javascript:searchStudent('srch_stud')" class="form-search"> {% csrf_token %}
 					<div class="input-group">
 						<div class="input-group-addon">
-							<select id="item_search_filters" type="radio">
-								<option value="id_num"/>ID Number
-								<option value="last_name"/>Last Name
-								<option value="first_name"/>First Name
+							<select id="item_search_filters" type="radio" >
+								<option value="id_num"/>ID Number</option>
+								<option value="last_name"/>Last Name</option>
+								<option value="first_name"/>First Name</option>
 							</select>
 						</div>
-						<input type="text" class="form-control" placeholder="Search">
+						<input id='seach_student' type="text" class="form-control" placeholder="Search">
 						<span class="input-group-btn">
-							<button class="btn btn-success" type="button">
+							<button id="but" class="btn btn-success" type="submit">
 								<span class="glyphicon glyphicon-search"></span>
 							</button>
 						</span>
 					</div><!-- /btn-group -->
 				</form>
-				<table class="table table-hover table-condensed">
-					<caption>Showing 2 of 2 result(s)...</caption>
+				<table id='stud_list' class="table table-hover table-condensed">
+					
+					<caption ><font color="#0747E4"> Result </font></caption>
 					<thead>
 						<tr>
 							<th>ID</th>
@@ -39,16 +40,19 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr></td>
-							<td>DELFINADO, Jerico Ca
-							<td>201047791esar TABUNGAR</td>
-							<td>HS, 8-A</td>
-						</tr>
-						<tr>
-							<td>201128590</td>
-							<td>CANAZARES, Yvonne AMOLONG</td>
-							<td>HS, 8-A</td>
-						</tr>
+					    
+					   
+						<!--{% for student in students %}
+							<tr>
+								<td>{{ student.stud_id }}</td></a>
+								<td>
+										{{ student.lastname}} {{' '}}
+										{{ student.firstname}} {{' '}}
+										{{ student.mi}} {{' '}} 
+								</td>
+								<td>{{ student.last_school_att}}</td>
+							</tr>
+						{% endfor %}-->
 					</tbody>
 				</table>
 			{% endblock %}

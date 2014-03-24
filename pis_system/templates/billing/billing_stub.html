@@ -1,0 +1,21 @@
+<ul  id="stud_info" type="none" style="margin-left:10px;  background:rgba(0,0,0,.1)">
+    
+    <li style="float:left">
+        
+            <img src="{{path}}" width="100px" height="100px">
+        
+    </li>
+    <li style="margin-left:105px">
+       
+        <ul  class="plate" type="none">
+            {% if student %}
+            <li><strong>{{student.lastname}}{{', '}} {{student.firstname}} {{' '}} {{student.mi}}</strong></li>
+            <li>{{student.stud_id}}</li>
+            <li>High School, 8-A</li>
+            <li>Academic Status: OK</li>
+            <li>Billing Profile: PAYING</li>
+            {% endif %}
+        </ul>
+        
+  </li>
+</ul>   

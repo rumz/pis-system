@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-
+SESSION_EXPIRE_AT_BROWSER_CLOSE=True
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -53,6 +53,9 @@ USE_I18N = True
 # calendars according to the current locale.
 USE_L10N = True
 
+USE_THOUSAND_SEPARATOR = True
+
+
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
 
@@ -86,7 +89,7 @@ STATICFILES_DIRS = (os.path.join( os.path.dirname( __file__ ), '..', 'templates/
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Quick-start development settings - unsuitable for production
@@ -98,25 +101,8 @@ SECRET_KEY = '3wy=@o%!i)exa_1ahexhu)nh2#5r$u2aj+b0q$&ez&w-a=%m#p'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#    'django.template.loaders.eggs.Loader',
+    #'django.template.loaders.eggs.Loader',
 )
-
-MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    # Uncomment the next line for simple clickjacking protection:
-    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
-)
-
-
-ROOT_URLCONF = 'pis_system.urls'
-
-WSGI_APPLICATION = 'pis_system.wsgi.application'
-
-TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -128,7 +114,36 @@ INSTALLED_APPS = (
     'bootstrap3',
     'pis_system',
     'billing'
+
+
 )
+
+MIDDLEWARE_CLASSES = (
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.locale.LocaleMiddleware'
+    # Uncomment the next line for simple clickjacking protection:
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
+
+#TEMPLATE_CONTEXT_PROCESSORS = (
+#    'django.contrib.auth.context_processors.auth',
+#    'django.core.context_processors.debug',
+#    'django.core.context_processors.i18n',
+#    'django.core.context_processors.media',
+#    'django.core.context_processors.static',
+#    'django.core.context_processors.request',
+#    'django.contrib.messages.context_processors.messages'
+#)
+ROOT_URLCONF = 'pis_system.urls'
+
+WSGI_APPLICATION = 'pis_system.wsgi.application'
+
+TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
